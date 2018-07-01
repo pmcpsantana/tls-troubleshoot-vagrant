@@ -66,7 +66,9 @@ Install npcap (the setup is in the Desktop).
 
     ![](wireshark-decoded.png)
 
-**NB** You can only decrypt SSL sessions that use the RSA key-exchange. This works on this vagrant environment because [Schannel](https://docs.microsoft.com/en-us/windows/desktop/secauthn/secure-channel) was configured as such at [provision-iiscrypto.ps1](provision-iiscrypto.ps1).
+**NB** You can only decrypt SSL sessions that use the RSA key-exchange. This works on this vagrant environment because [Schannel](https://docs.microsoft.com/en-us/windows/desktop/secauthn/secure-channel) was configured as such at [provision-iiscrypto.ps1](provision-iiscrypto.ps1). You can also use IIS Crypto to only enable the `PKCS` key exchange (don't forget to reboot after applying the settings):
+
+![](iiscrypto-only-rsa-key-exchange.png)
 
 
 # Filters
